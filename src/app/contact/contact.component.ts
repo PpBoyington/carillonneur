@@ -8,19 +8,25 @@ import {FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  angularForm = new FormGroup ({
-    name: new FormControl()
+  registerForm = new FormGroup ({
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    email: new FormControl()
   });
   constructor(private fb: FormBuilder) { }
 
   createForm() {
-    this.angularForm = this.fb.group({
-      name: ['', Validators.required],
+    this.registerForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.required, Validators.email],
     });
   }
 
   ngOnInit() {
     this.createForm();
   }
+
+  onSubmit() {}
 
 }
