@@ -1,19 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import {MatButtonModule, MatCheckboxModule, MatDialogModule, MatMenuModule} from '@angular/material';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import {MatButtonModule, MatCheckboxModule, MatMenuModule} from '@angular/material';
-
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LivreComponent } from './livre/livre.component';
-import { AuteurComponent } from './auteur/auteur.component';
-import { ProjetComponent } from './projet/projet.component';
-import { ContactComponent } from './contact/contact.component';
-import { CarillonnerComponent } from './carillonner/carillonner.component';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
+import {HeaderComponent} from './header/header.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {LivreComponent} from './livre/livre.component';
+import {AuteurComponent} from './auteur/auteur.component';
+import {ProjetComponent} from './projet/projet.component';
+import {ContactComponent} from './contact/contact.component';
+import {CarillonnerComponent} from './carillonner/carillonner.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -48,6 +49,10 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatCheckboxModule,
     MatMenuModule,
+    MatDialogModule,
+    MDBBootstrapModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
