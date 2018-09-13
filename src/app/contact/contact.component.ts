@@ -23,6 +23,8 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  get firstName(): any { return this.registerForm.get('firstName'); }
+
   ngOnInit() {
     this.createForm();
   }

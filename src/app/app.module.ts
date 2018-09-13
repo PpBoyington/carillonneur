@@ -17,14 +17,14 @@ import {ContactComponent} from './contact/contact.component';
 import {CarillonnerComponent} from './carillonner/carillonner.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'propos', component: HomeComponent },
   { path: 'livre', component: LivreComponent },
   { path: 'auteur', component: AuteurComponent },
   { path: 'projet', component: ProjetComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contacte', component: ContactComponent },
   { path: 'carillonner', component: CarillonnerComponent },
   { path: '',
-    redirectTo: '/home',
+    redirectTo: '/propos',
     pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent }
